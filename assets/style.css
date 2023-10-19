@@ -1,6 +1,7 @@
+/* Add your CSS styles here */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: hsl(0, 0%, 96%);
 }
 .container {
     max-width: 800px;
@@ -20,15 +21,15 @@ body {
     padding: 0;
 }
 .option {
-    margin: 5px;
     padding: 5px;
-    border: #000 solid 1px;
+    margin: 5px 0;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);;
+    border: #000 solid 1px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-.option:hover{
-    background-color:#65cdf0;
-    box-shadow: 0 0 0 0;
+.option:hover {
+    background-color: aqua;
+    box-shadow: 0;
 }
 .result {
     font-weight: bold;
