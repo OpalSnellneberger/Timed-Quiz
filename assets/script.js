@@ -1,17 +1,107 @@
 // JavaScript for the quiz using jQuery
 const questions = [
     {
-        question: "What is 2 + 2?",
-        options: ["3", "4", "5", "6"],
-        answer: "4"
+        question: "What is the purpose of JavaScript in web development?",
+        options: ["To style web pages", "To add interactivity and functionality to web pages", "To create web page layouts"],
+        answer: "To add interactivity and functionality to web pages"
     },
     {
-        question: "What is 5 - 3?",
-        options: ["2", "3", "4", "5"],
-        answer: "2"
+        question: "What is the result of `typeof null`?",
+        options: ["'undefined'", "'null'", "'object'"],
+        answer: "'object'"
     },
-    // Add more questions here
+    {
+        question: "Which keyword is used to declare a variable in JavaScript?",
+        options: ["'var'", "'let'", "'const'", "'all of the above'"],
+        answer: "'all of the above'"
+    },
+    {
+        question: "What is the correct way to write a single-line comment in JavaScript?",
+        options: ["'// This is a comment'", "'<!-- This is a comment -->'", "'/* This is a comment'"],
+        answer: "'// This is a comment'"
+    },
+    {
+        question: "What is the output of `2 + '2'` in JavaScript?",
+        options: ["4", "'22'", "2 + 2"],
+        answer: "'22'"
+    },
+    {
+        question: "Which loop is used to iterate over the properties of an object in JavaScript?",
+        options: ["for-in loop", "for loop", "while loop"],
+        answer: "for-in loop"
+    },
+    {
+        question: "What is the purpose of the `if` statement in JavaScript?",
+        options: ["To define a function", "To execute a block of code if a condition is true", "To create a new variable"],
+        answer: "To execute a block of code if a condition is true"
+    },
+    {
+        question: "What is the result of `3 === '3'` in JavaScript?",
+        options: ["true", "false", "undefined"],
+        answer: "false"
+    },
+    {
+        question: "What is the JavaScript operator used to combine two or more strings?",
+        options: ["'+'", "'&'", "'/'"],
+        answer: "'+'"
+    },
+    {
+        question: "What is the role of the `addEventListener` method in JavaScript?",
+        options: ["To add a new element to the DOM", "To create an array", "To attach an event handler function to an HTML element"],
+        answer: "To attach an event handler function to an HTML element"
+    },
+    {
+        question: "How do you define a function in JavaScript?",
+        options: ["function myFunction() {}", "var myFunction = function() {}", "Both A and B"],
+        answer: "Both A and B"
+    },
+    {
+        question: "What is the JavaScript function `parseInt('42px')` return?",
+        options: ["'42px'", "42", "NaN"],
+        answer: "42"
+    },
+    {
+        question: "Which JavaScript method is used to add or change HTML content?",
+        options: ["innerHTML", "createElement", "appendChild"],
+        answer: "innerHTML"
+    },
+    {
+        question: "What is a JavaScript closure?",
+        options: ["A function that is defined inside another function", "A way to lock a variable to prevent changes", "A comment at the end of a line of code"],
+        answer: "A function that is defined inside another function"
+    },
+    {
+        question: "How do you check if a variable is an array in JavaScript?",
+        options: ["Using the `Array.isArray(variable)` method", "Using the `typeof` operator", "There's no way to check if a variable is an array"],
+        answer: "Using the `Array.isArray(variable)` method"
+    },
+    {
+        question: "What is the purpose of the `return` statement in a JavaScript function?",
+        options: ["To define a new variable", "To stop the execution of a function and return a value", "To create a loop"],
+        answer: "To stop the execution of a function and return a value"
+    },
+    {
+        question: "What is a callback function in JavaScript?",
+        options: ["A function that is called at the beginning of a program", "A function that is passed as an argument to another function and executed later", "A function that returns a boolean value"],
+        answer: "A function that is passed as an argument to another function and executed later"
+    },
+    {
+        question: "Which JavaScript method is used to remove the last element from an array?",
+        options: ["pop()", "shift()", "unshift()"],
+        answer: "pop()"
+    },
+    {
+        question: "What is the difference between `null` and `undefined` in JavaScript?",
+        options: ["They are the same and can be used interchangeably", "`null` represents an intentional absence of value, while `undefined` indicates a variable that has been declared but has not been assigned a value.", "`null` is a number, and `undefined` is a string."],
+        answer: "`null` represents an intentional absence of value, while `undefined` indicates a variable that has been declared but has not been assigned a value."
+    },
+    {
+        question: "How do you define a constant variable in JavaScript?",
+        options: ["Using the `let` keyword", "Using the `var` keyword", "Using the `const` keyword"],
+        answer: "Using the `const` keyword"
+    },
 ];
+
 
 let shuffledQuestions = [];
 let currentQuestionIndex = 0;
@@ -92,7 +182,7 @@ function showCompletionScreen() {
     quizContainer.hide();
     completionScreen.show();
 
-    scoreDisplay.text(`Score: ${correctAnswers}/${shuffledQuestions.length}`);
+    scoreDisplay.text(`Score: ${correctAnswers}`);
 }
 
 function startQuiz() {
