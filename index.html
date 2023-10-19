@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Coding Quiz</title>
+        <link rel="stylesheet" type="text/css" href="./assets/style.css" />
+
+        <link rel="stylesheet" type="text/css" href="./assets/style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Coding Quiz</h1>
+            <div id="quiz" style="display: none;">
+                <div class="question" id="question">Question goes here</div>
+                <ul class="options" id="options">
+                    <li class="option">Option 1</li>
+                    <li class="option">Option 2</li>
+                    <li class="option">Option 3</li>
+                    <li class="option">Option 4</li>
+                </ul>
+                <p>Time Remaining: <span id="timeRemaining"></span> seconds</p>
+                <p>Score: <span id="currentScore">0</span></p>
+                <p class="result" id="result"></p>
+            </div>
+    
+            <!-- Completion screen -->
+            <div id="completionScreen" style="display: none;">
+                <h2>Quiz Completed</h2>
+                <p id="scoreDisplay">Score: 0/0</p>
+                <p>Enter your initials:</p>
+                <input type="text" id="initialsInput">
+                <button id="submitInitialsButton">Submit</button>
+            </div>
+    
+            <button id="startButton">Start Quiz</button>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="./assets/script.js"></script>
+    </body>
+</html>
